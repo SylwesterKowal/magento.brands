@@ -1,0 +1,24 @@
+{
+  "name": "sylwesterkowal/magento.brands",
+  "description": "Magento Brands Plugin manage as categories",
+  "keywords": ["magento","brands","plugin","manufacturer"],
+  "homepage": "https://github.com/SylwesterKowal/magento.brands",
+  "type": "magento-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sylwester Kowal",
+      "email": "sylwester.kowal@21w.pl"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.16",
+    "magento/magento": "~1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Delivery\\": "app"
+    }
+  },
+  "minimum-stability": "stable"
+}

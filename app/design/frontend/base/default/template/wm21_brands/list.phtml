@@ -1,0 +1,35 @@
+<div class="brands-view">
+    <div class="page-title">
+        <h1><?php echo $this->__('Brands'); ?></h1>
+    </div>
+
+    <div class="manufacturer-list">
+        <?php $chars = array(); ?>
+
+        <?php $i = 0; ?>
+        <?php foreach ($this->getManufacturers() as $id => $name) : ?>
+        <?php $char = $this->getChar($name); ?>
+
+        <?php if (!in_array($char, $chars)) : ?>
+        <?php if (count($chars)) : ?>
+        </ul>
+    </div>
+    <?php endif; ?>
+
+    <?php $chars[] = $char; ?>
+    <?php $cls = (0 == $i % 5) ? 'first' : ''; ?>
+    <?php if (0 == ($i + 1) % 5) $cls = 'last'; ?>
+    <?php $i++; ?>
+
+    <div class="manufacturer-char-container <?php echo $cls; ?>">
+        <h2><?php echo $char; ?></h2>
+
+        <ul>
+            <?php endif; ?>
+
+            <li>
+                <a href="<?php echo Mage::getUrl($this->getShortName($name)); ?>"><?php echo $name; ?></a>
+            </li>
+            <?php endforeach; ?>
+    </div>
+</div>

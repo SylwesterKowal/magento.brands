@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Wm21_Brands>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Wm21_Brands>
+  </modules>
+</config>

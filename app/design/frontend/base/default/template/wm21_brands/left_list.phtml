@@ -1,0 +1,14 @@
+<div class="block block-layered-nav">
+    <?php $_i = 0; $class=""; ?>
+    <div class="block-content">
+        <ul class="nav-category-list">
+            <?php foreach ($this->getManufacturers() as $id => $name) : ?>
+                <li>
+                    <?php $_i++; if($_i == count($_manufacturersCollection)) $class="last"; ?>
+                    <a href="<?php echo Mage::getUrl($this->getShortName($name)); ?>" class="<?php echo $class; ?>"><?php echo $name; ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+
